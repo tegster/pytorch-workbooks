@@ -18,7 +18,10 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 import numpy as np
 
+#
 # Create a Dataset of 100 rows and 1 column
+#
+
 X = torch.randn(100, 1) * 10
 Y = X + 3*torch.randn(100,1)      # Y is a function of X, shift it up and down to increase noise
 plt.plot( X, Y, 'o')
