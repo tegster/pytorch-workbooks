@@ -53,6 +53,7 @@ model = LinearRegression(1,1)
 def get_params():
   return (w[0][0].item(), b[0].item())
 
+# Plot the trained model by getting the weight and bias then
 def plot_fit(title):
   plt.title = title
   w1, b1 = get_params() # get the weight and bias values from the model
@@ -98,8 +99,10 @@ for i in range(epochs):
   loss.backward()     # take the gradient of the loss function, we use loss.backward() to computer gradient
   optimizer.step()    # we update our model parameters by optimizer.step(), can be called once gradients are computed
 
+# Plot the Loss in relation to each epoch
 plt.plot(range(epochs), losses)
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
 
+# Plot the Trained Model by mult
 plot_fit('Trained Model')
